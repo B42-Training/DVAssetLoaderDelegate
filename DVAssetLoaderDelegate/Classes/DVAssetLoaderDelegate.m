@@ -154,7 +154,6 @@ static NSTimeInterval const kDefaultLoadingTimeout = 15;
 - (void)resourceLoader:(AVAssetResourceLoader *)resourceLoader didCancelLoadingRequest:(AVAssetResourceLoadingRequest *)loadingRequest {
     NSUInteger index = [self.pendingRequests indexOfObject:loadingRequest];
 
-    NSParameterAssert(index != NSNotFound);
     if (index == NSNotFound) {
         return;
     }
